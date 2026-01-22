@@ -1,0 +1,21 @@
+baseURL = "https://signalvsnoise.to/"
+languageCode = "en-us"
+title = "SignalVsNoise"
+theme = "PaperMod"
+
+[params]
+  description = "Data-driven explanations of prediction markets and uncertainty"
+  defaultTheme = "light"
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+
+[menu]
+  [[menu.main]]
+    name = "Articles"
+    url = "/posts/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Free Guide"
+    url = "/free-guide/"
+    weight = 2
