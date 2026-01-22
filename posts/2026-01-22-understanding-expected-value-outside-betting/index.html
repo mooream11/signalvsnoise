@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="light">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Understanding Expected Value Outside Betting | SignalVsNoise</title>
+<meta name="keywords" content="">
+<meta name="description" content="Understanding Expected Value Outside Betting
+When discussing gambling, investing, or decision-making under uncertainty, the term expected value frequently arises. Most often, expected value (EV) is linked to betting scenarios, where it helps bettors evaluate the quality of different wagers. However, expected value extends far beyond traditional betting and plays a crucial role in various arenas, including finance, insurance, sports strategies, and data-driven markets. This article explores what expected value means outside betting, why it matters, and how understanding it can improve decision-making where uncertainty and risk are involved.">
+<meta name="author" content="">
+<link rel="canonical" href="https://signalvsnoise.to/posts/2026-01-22-understanding-expected-value-outside-betting/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://signalvsnoise.to/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://signalvsnoise.to/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://signalvsnoise.to/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://signalvsnoise.to/apple-touch-icon.png">
+<link rel="mask-icon" href="https://signalvsnoise.to/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://signalvsnoise.to/posts/2026-01-22-understanding-expected-value-outside-betting/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    }
+
+</script><meta property="og:url" content="https://signalvsnoise.to/posts/2026-01-22-understanding-expected-value-outside-betting/">
+  <meta property="og:site_name" content="SignalVsNoise">
+  <meta property="og:title" content="Understanding Expected Value Outside Betting">
+  <meta property="og:description" content="Understanding Expected Value Outside Betting When discussing gambling, investing, or decision-making under uncertainty, the term expected value frequently arises. Most often, expected value (EV) is linked to betting scenarios, where it helps bettors evaluate the quality of different wagers. However, expected value extends far beyond traditional betting and plays a crucial role in various arenas, including finance, insurance, sports strategies, and data-driven markets. This article explores what expected value means outside betting, why it matters, and how understanding it can improve decision-making where uncertainty and risk are involved.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-22T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Understanding Expected Value Outside Betting">
+<meta name="twitter:description" content="Understanding Expected Value Outside Betting
+When discussing gambling, investing, or decision-making under uncertainty, the term expected value frequently arises. Most often, expected value (EV) is linked to betting scenarios, where it helps bettors evaluate the quality of different wagers. However, expected value extends far beyond traditional betting and plays a crucial role in various arenas, including finance, insurance, sports strategies, and data-driven markets. This article explores what expected value means outside betting, why it matters, and how understanding it can improve decision-making where uncertainty and risk are involved.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://signalvsnoise.to/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Understanding Expected Value Outside Betting",
+      "item": "https://signalvsnoise.to/posts/2026-01-22-understanding-expected-value-outside-betting/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Understanding Expected Value Outside Betting",
+  "name": "Understanding Expected Value Outside Betting",
+  "description": "Understanding Expected Value Outside Betting When discussing gambling, investing, or decision-making under uncertainty, the term expected value frequently arises. Most often, expected value (EV) is linked to betting scenarios, where it helps bettors evaluate the quality of different wagers. However, expected value extends far beyond traditional betting and plays a crucial role in various arenas, including finance, insurance, sports strategies, and data-driven markets. This article explores what expected value means outside betting, why it matters, and how understanding it can improve decision-making where uncertainty and risk are involved.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Understanding Expected Value Outside Betting When discussing gambling, investing, or decision-making under uncertainty, the term expected value frequently arises. Most often, expected value (EV) is linked to betting scenarios, where it helps bettors evaluate the quality of different wagers. However, expected value extends far beyond traditional betting and plays a crucial role in various arenas, including finance, insurance, sports strategies, and data-driven markets. This article explores what expected value means outside betting, why it matters, and how understanding it can improve decision-making where uncertainty and risk are involved.\nWant the full framework? → Get the Free Guide No picks. No hype. Unsubscribe anytime.\nWhat Is Expected Value? At its core, expected value is a statistical concept representing the average outcome of a random event if repeated many times. It is a weighted average of all possible outcomes, where each outcome is multiplied by its probability of occurring.\nFormula for Expected Value (Discrete outcomes):\n[ \\text{EV} = \\sum (P_i \\times V_i) ]\nWhere:\n(P_i) = Probability of outcome (i) (V_i) = Value or payoff of outcome (i) Example:\nImagine a simple coin toss game:\nWin $10 if heads Lose $5 if tails The expected value of playing the game once is:\n[ (0.5 \\times 10) + (0.5 \\times -5) = 5 - 2.5 = 2.5 ]\nThis means, on average, you expect to win $2.50 per toss over a large number of tosses.\nWhy Expected Value Matters Beyond Betting While EV is a cornerstone in betting strategies, it has broad applications:\nInvestment decisions: Assessing the average return of stocks or projects, factoring in probabilities of various outcomes. Insurance: Calculating premiums by estimating the expected cost of claims. Business strategy: Evaluating the expected profitability of launching products with uncertain market acceptance. Sports decisions: Coaches or managers weighing plays based on expected points or success rates. Prediction markets: Aggregating collective probabilities to forecast outcomes. Understanding expected value provides a quantitative framework for making decisions that involve risk and uncertainty, improving planning and resource allocation.\nExpected Value in Investment and Finance Investors routinely face decisions where the future payoff is uncertain. Expected value gives a formal way to estimate the long-run average return and thus judge investment options.\nExample: Stock Investment Suppose an investor is deciding between two stocks:\nOutcome Stock A Probability Stock A Payoff (%) Stock B Probability Stock B Payoff (%) Large gain 20% +30% 10% +50% Moderate gain 50% +10% 60% +15% Loss 30% -10% 30% -20% Expected return for Stock A:\n[ 0.2 \\times 30 + 0.5 \\times 10 + 0.3 \\times (-10) = 6 + 5 - 3 = 8% ]\nExpected return for Stock B:\n[ 0.1 \\times 50 + 0.6 \\times 15 + 0.3 \\times (-20) = 5 + 9 - 6 = 8% ]\nBoth stocks have the same expected return of 8%, though their risk profiles differ. This illustration shows that expected value alone doesn’t capture risk—it provides the average outcome but not variability around that average. Investors often combine EV with measures like variance or standard deviation.\nExpected Value and Insurance Insurance companies rely heavily on EV to set premiums that cover expected payouts and operating costs.\nExample: Car Insurance Imagine an insurance company insuring a thousand cars:\nProbability a car owner will file a claim in a year: 2% Average claim amount: $5,000 Expected claim cost per insured car:\n[ 0.02 \\times 5000 = 100 ]\nIf the insurer charges exactly $100 per year per policy, on average, it breaks even on claims (ignoring administrative costs and profit margins). Thus, EV helps estimate fair pricing that balances premiums and expected losses.\nExpected Value in Sports Analytics and Strategy Expected value concepts have gained traction in sports to quantify decision-making and performance optimization.\nExample: NBA Shot Selection Coaches and analysts assess the expected value of different shot types, combining shooting percentages and point values:\nThree-point shot:\nSuccess rate ~35% Worth 3 points EV per attempt: (0.35 \\times 3 = 1.05) points Mid-range shot:\nSuccess rate ~45% Worth 2 points EV per attempt: (0.45 \\times 2 = 0.9) points Free throw:\nSuccess rate ~75% Worth 1 point EV per attempt: (0.75 \\times 1 = 0.75) points From an EV perspective, three-point shots yield more expected points per attempt despite lower shooting percentage, explaining their rising popularity in modern basketball.\nMechanics of Expected Value in Prediction Markets Prediction markets aggregate individual beliefs into a market price reflecting the probability of future events. The prices imply expected values and offer signals about collective intelligence.\nHow it Works Market participants buy or sell contracts that pay a fixed amount if an event occurs (e.g., a candidate wins an election). The contract price approximates the market’s consensus probability. Traders are incentivized to buy when price \u003c true probability (positive expected value) and sell when price \u003e true probability (negative expected value). For example, a contract priced at $0.60 pays $1 if the event happens. The market implies a 60% chance. A trader who believes the true chance is higher than 60% sees positive expected value and thus an incentive to buy.\nWhy Expected Value Isn’t the Whole Story While useful, expected value has limitations:\nRisk and variance: Two options with identical EV might differ widely in riskiness. For instance, a lottery ticket may have a positive EV for large jackpots but extremely low odds, making it unattractive to risk-averse individuals. Time horizon: EV is most accurate over many repetitions. For one-off events, the averaged result may not be meaningful. Non-monetary factors: Outcomes might have qualitative impacts (e.g., reputation, emotion) not captured by payoff values. Simplified assumptions: Probabilities and payoffs may be estimates and subject to errors. Understanding these nuances is crucial to applying expected value appropriately.\nSummary: Key Points About Expected Value Outside Betting Expected value measures the average expected outcome, accounting for probabilities and payoffs. It informs decision-making in finance, insurance, business, sports, and forecasting. In investment and insurance, EV helps balance reward and risk management. Sports analytics use EV to optimize strategies like shot selection or play calling. Prediction markets rely on EV to generate fair prices that aggregate information. EV is a foundational tool but should be complemented with risk analysis and consideration of context. Closing Thoughts Expected value is a versatile and powerful concept for evaluating uncertain outcomes, extending well beyond betting and gambling. Whether deciding on investments, analyzing sports strategies, setting insurance rates, or trading information, expected value provides a rational, quantitative starting point. Recognizing its strengths and limitations is essential for informed decision-making in any uncertain environment—helping turn data and probabilities into actionable insights.\nEducational only; not betting advice.\nHow professionals think about this They focus on calibration and process, not short-term outcomes. They separate signal from noise over many trials. They care about prices, liquidity, and incentives—not narratives. ",
+  "wordCount" : "1127",
+  "inLanguage": "en",
+  "datePublished": "2026-01-22T00:00:00Z",
+  "dateModified": "2026-01-22T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://signalvsnoise.to/posts/2026-01-22-understanding-expected-value-outside-betting/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SignalVsNoise",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://signalvsnoise.to/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://signalvsnoise.to/" accesskey="h" title="SignalVsNoise (Alt + H)">SignalVsNoise</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://signalvsnoise.to/posts/" title="Articles">
+                    <span>Articles</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://signalvsnoise.to/free-guide/" title="Free Guide">
+                    <span>Free Guide</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Understanding Expected Value Outside Betting
+    </h1>
+    <div class="post-meta"><span title='2026-01-22 00:00:00 +0000 UTC'>January 22, 2026</span>&nbsp;·&nbsp;<span>6 min</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="understanding-expected-value-outside-betting">Understanding Expected Value Outside Betting<a hidden class="anchor" aria-hidden="true" href="#understanding-expected-value-outside-betting">#</a></h1>
+<p>When discussing gambling, investing, or decision-making under uncertainty, the term <em>expected value</em> frequently arises. Most often, expected value (EV) is linked to betting scenarios, where it helps bettors evaluate the quality of different wagers. However, expected value extends far beyond traditional betting and plays a crucial role in various arenas, including finance, insurance, sports strategies, and data-driven markets. This article explores what expected value means outside betting, why it matters, and how understanding it can improve decision-making where uncertainty and risk are involved.</p>
+<!-- SVS_INTRO_CTA -->
+<p><strong>Want the full framework?</strong>
+→ <a href="/free-guide/">Get the Free Guide</a>
+<em>No picks. No hype. Unsubscribe anytime.</em></p>
+<hr>
+<h2 id="what-is-expected-value">What Is Expected Value?<a hidden class="anchor" aria-hidden="true" href="#what-is-expected-value">#</a></h2>
+<p>At its core, expected value is a statistical concept representing the average outcome of a random event if repeated many times. It is a weighted average of all possible outcomes, where each outcome is multiplied by its probability of occurring.</p>
+<p><strong>Formula for Expected Value (Discrete outcomes):</strong></p>
+<p>[
+\text{EV} = \sum (P_i \times V_i)
+]</p>
+<p>Where:</p>
+<ul>
+<li>(P_i) = Probability of outcome (i)</li>
+<li>(V_i) = Value or payoff of outcome (i)</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>Imagine a simple coin toss game:</p>
+<ul>
+<li>Win $10 if heads</li>
+<li>Lose $5 if tails</li>
+</ul>
+<p>The expected value of playing the game once is:</p>
+<p>[
+(0.5 \times 10) + (0.5 \times -5) = 5 - 2.5 = 2.5
+]</p>
+<p>This means, on average, you expect to win $2.50 per toss over a large number of tosses.</p>
+<hr>
+<h2 id="why-expected-value-matters-beyond-betting">Why Expected Value Matters Beyond Betting<a hidden class="anchor" aria-hidden="true" href="#why-expected-value-matters-beyond-betting">#</a></h2>
+<p>While EV is a cornerstone in betting strategies, it has broad applications:</p>
+<ul>
+<li><strong>Investment decisions:</strong> Assessing the average return of stocks or projects, factoring in probabilities of various outcomes.</li>
+<li><strong>Insurance:</strong> Calculating premiums by estimating the expected cost of claims.</li>
+<li><strong>Business strategy:</strong> Evaluating the expected profitability of launching products with uncertain market acceptance.</li>
+<li><strong>Sports decisions:</strong> Coaches or managers weighing plays based on expected points or success rates.</li>
+<li><strong>Prediction markets:</strong> Aggregating collective probabilities to forecast outcomes.</li>
+</ul>
+<p>Understanding expected value provides a quantitative framework for making decisions that involve risk and uncertainty, improving planning and resource allocation.</p>
+<hr>
+<h2 id="expected-value-in-investment-and-finance">Expected Value in Investment and Finance<a hidden class="anchor" aria-hidden="true" href="#expected-value-in-investment-and-finance">#</a></h2>
+<p>Investors routinely face decisions where the future payoff is uncertain. Expected value gives a formal way to estimate the long-run average return and thus judge investment options.</p>
+<h3 id="example-stock-investment">Example: Stock Investment<a hidden class="anchor" aria-hidden="true" href="#example-stock-investment">#</a></h3>
+<p>Suppose an investor is deciding between two stocks:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Outcome</th>
+          <th>Stock A Probability</th>
+          <th>Stock A Payoff (%)</th>
+          <th>Stock B Probability</th>
+          <th>Stock B Payoff (%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Large gain</td>
+          <td>20%</td>
+          <td>+30%</td>
+          <td>10%</td>
+          <td>+50%</td>
+      </tr>
+      <tr>
+          <td>Moderate gain</td>
+          <td>50%</td>
+          <td>+10%</td>
+          <td>60%</td>
+          <td>+15%</td>
+      </tr>
+      <tr>
+          <td>Loss</td>
+          <td>30%</td>
+          <td>-10%</td>
+          <td>30%</td>
+          <td>-20%</td>
+      </tr>
+  </tbody>
+</table>
+<p>Expected return for Stock A:</p>
+<p>[
+0.2 \times 30 + 0.5 \times 10 + 0.3 \times (-10) = 6 + 5 - 3 = 8%
+]</p>
+<p>Expected return for Stock B:</p>
+<p>[
+0.1 \times 50 + 0.6 \times 15 + 0.3 \times (-20) = 5 + 9 - 6 = 8%
+]</p>
+<p>Both stocks have the same expected return of 8%, though their risk profiles differ. This illustration shows that expected value alone doesn&rsquo;t capture risk—it provides the average outcome but not variability around that average. Investors often combine EV with measures like variance or standard deviation.</p>
+<hr>
+<h2 id="expected-value-and-insurance">Expected Value and Insurance<a hidden class="anchor" aria-hidden="true" href="#expected-value-and-insurance">#</a></h2>
+<p>Insurance companies rely heavily on EV to set premiums that cover expected payouts and operating costs.</p>
+<h3 id="example-car-insurance">Example: Car Insurance<a hidden class="anchor" aria-hidden="true" href="#example-car-insurance">#</a></h3>
+<p>Imagine an insurance company insuring a thousand cars:</p>
+<ul>
+<li>Probability a car owner will file a claim in a year: 2%</li>
+<li>Average claim amount: $5,000</li>
+</ul>
+<p>Expected claim cost per insured car:</p>
+<p>[
+0.02 \times 5000 = 100
+]</p>
+<p>If the insurer charges exactly $100 per year per policy, on average, it breaks even on claims (ignoring administrative costs and profit margins). Thus, EV helps estimate fair pricing that balances premiums and expected losses.</p>
+<hr>
+<h2 id="expected-value-in-sports-analytics-and-strategy">Expected Value in Sports Analytics and Strategy<a hidden class="anchor" aria-hidden="true" href="#expected-value-in-sports-analytics-and-strategy">#</a></h2>
+<p>Expected value concepts have gained traction in sports to quantify decision-making and performance optimization.</p>
+<h3 id="example-nba-shot-selection">Example: NBA Shot Selection<a hidden class="anchor" aria-hidden="true" href="#example-nba-shot-selection">#</a></h3>
+<p>Coaches and analysts assess the expected value of different shot types, combining shooting percentages and point values:</p>
+<ul>
+<li>
+<p><strong>Three-point shot:</strong></p>
+<ul>
+<li>Success rate ~35%</li>
+<li>Worth 3 points</li>
+<li>EV per attempt: (0.35 \times 3 = 1.05) points</li>
+</ul>
+</li>
+<li>
+<p><strong>Mid-range shot:</strong></p>
+<ul>
+<li>Success rate ~45%</li>
+<li>Worth 2 points</li>
+<li>EV per attempt: (0.45 \times 2 = 0.9) points</li>
+</ul>
+</li>
+<li>
+<p><strong>Free throw:</strong></p>
+<ul>
+<li>Success rate ~75%</li>
+<li>Worth 1 point</li>
+<li>EV per attempt: (0.75 \times 1 = 0.75) points</li>
+</ul>
+</li>
+</ul>
+<p>From an EV perspective, three-point shots yield more expected points per attempt despite lower shooting percentage, explaining their rising popularity in modern basketball.</p>
+<hr>
+<h2 id="mechanics-of-expected-value-in-prediction-markets">Mechanics of Expected Value in Prediction Markets<a hidden class="anchor" aria-hidden="true" href="#mechanics-of-expected-value-in-prediction-markets">#</a></h2>
+<p>Prediction markets aggregate individual beliefs into a market price reflecting the probability of future events. The prices imply expected values and offer signals about collective intelligence.</p>
+<h3 id="how-it-works">How it Works<a hidden class="anchor" aria-hidden="true" href="#how-it-works">#</a></h3>
+<ul>
+<li>Market participants buy or sell contracts that pay a fixed amount if an event occurs (e.g., a candidate wins an election).</li>
+<li>The contract price approximates the market’s consensus probability.</li>
+<li>Traders are incentivized to buy when price &lt; true probability (positive expected value) and sell when price &gt; true probability (negative expected value).</li>
+</ul>
+<p>For example, a contract priced at $0.60 pays $1 if the event happens. The market implies a 60% chance. A trader who believes the true chance is higher than 60% sees positive expected value and thus an incentive to buy.</p>
+<hr>
+<h2 id="why-expected-value-isnt-the-whole-story">Why Expected Value Isn’t the Whole Story<a hidden class="anchor" aria-hidden="true" href="#why-expected-value-isnt-the-whole-story">#</a></h2>
+<p>While useful, expected value has limitations:</p>
+<ul>
+<li><strong>Risk and variance:</strong> Two options with identical EV might differ widely in riskiness. For instance, a lottery ticket may have a positive EV for large jackpots but extremely low odds, making it unattractive to risk-averse individuals.</li>
+<li><strong>Time horizon:</strong> EV is most accurate over many repetitions. For one-off events, the averaged result may not be meaningful.</li>
+<li><strong>Non-monetary factors:</strong> Outcomes might have qualitative impacts (e.g., reputation, emotion) not captured by payoff values.</li>
+<li><strong>Simplified assumptions:</strong> Probabilities and payoffs may be estimates and subject to errors.</li>
+</ul>
+<p>Understanding these nuances is crucial to applying expected value appropriately.</p>
+<hr>
+<h2 id="summary-key-points-about-expected-value-outside-betting">Summary: Key Points About Expected Value Outside Betting<a hidden class="anchor" aria-hidden="true" href="#summary-key-points-about-expected-value-outside-betting">#</a></h2>
+<ul>
+<li>Expected value measures the average expected outcome, accounting for probabilities and payoffs.</li>
+<li>It informs decision-making in finance, insurance, business, sports, and forecasting.</li>
+<li>In investment and insurance, EV helps balance reward and risk management.</li>
+<li>Sports analytics use EV to optimize strategies like shot selection or play calling.</li>
+<li>Prediction markets rely on EV to generate fair prices that aggregate information.</li>
+<li>EV is a foundational tool but should be complemented with risk analysis and consideration of context.</li>
+</ul>
+<hr>
+<h2 id="closing-thoughts">Closing Thoughts<a hidden class="anchor" aria-hidden="true" href="#closing-thoughts">#</a></h2>
+<p>Expected value is a versatile and powerful concept for evaluating uncertain outcomes, extending well beyond betting and gambling. Whether deciding on investments, analyzing sports strategies, setting insurance rates, or trading information, expected value provides a rational, quantitative starting point. Recognizing its strengths and limitations is essential for informed decision-making in any uncertain environment—helping turn data and probabilities into actionable insights.</p>
+<hr>
+<blockquote>
+<p>Educational only; not betting advice.</p>
+</blockquote>
+<h2 id="how-professionals-think-about-this">How professionals think about this<a hidden class="anchor" aria-hidden="true" href="#how-professionals-think-about-this">#</a></h2>
+<ul>
+<li>They focus on calibration and process, not short-term outcomes.</li>
+<li>They separate signal from noise over many trials.</li>
+<li>They care about prices, liquidity, and incentives—not narratives.</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://signalvsnoise.to/">SignalVsNoise</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
