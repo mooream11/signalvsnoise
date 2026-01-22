@@ -19,3 +19,8 @@ theme = "PaperMod"
     name = "Free Guide"
     url = "/free-guide/"
     weight = 2
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
