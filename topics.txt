@@ -1,4 +1,3 @@
-What is market liquidity in betting?
 How odds are priced by sportsbooks
 Why sportsbooks limit bettors
 Prediction markets vs sportsbooks
@@ -13,4 +12,3 @@ How betting limits work
 What is market efficiency?
 Why betting markets are inefficient
 How professionals think about variance
-
