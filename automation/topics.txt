@@ -1,0 +1,59 @@
+What odds actually represent
+Why odds are not predictions
+What liquidity really means
+Why low-liquidity markets are misleading
+How price movement reveals information
+Why closing line value exists
+How incentives shape market prices
+Why sportsbooks move lines
+Why markets don’t need to be right to be efficient
+How limits affect price quality
+Why sharp money moves markets early
+Why public money moves markets late
+How arbitrage really works
+Why volume is not liquidity
+What market depth means
+Why consensus prices matter
+When markets fail
+Why some markets are intentionally inefficient
+How risk management affects pricing
+Why books shade lines
+What expected value actually means
+Why winning bets can still be bad
+Why losing bets can be correct
+EV vs outcome thinking
+Why small edges compound
+Why variance hides skill
+Long-run vs short-run decision quality
+Why sample size matters
+Why intuition fails under uncertainty
+Expected value outside betting
+Why professionals think in distributions
+Why ROI is misunderstood
+Why streaks don’t imply skill
+Why discipline matters more than prediction
+Why sportsbooks limit winners
+Why limits signal market confidence
+Why early lines are fragile
+Why late lines are sharper
+Why props behave differently than sides
+Why niche markets persist
+Why information timing matters
+Why books copy each other
+Why exchanges differ from sportsbooks
+Why market makers hedge
+Why price resistance exists
+Why limits rise over time
+Why some books take sharper action
+Why soft markets attract pros
+Why market maturity matters
+Why markets beat pundits
+Why certainty is dangerous
+Why explanation beats prediction
+Why most betting content is misleading
+Why narratives distort prices
+Why humility matters in markets
+Why professionals avoid hot takes
+Why simplicity scales
+Why understanding incentives changes everything
+Why edge is contextual

@@ -1,50 +1,24 @@
 import os
+import random
 import re
 import subprocess
 from datetime import datetime
 from pathlib import Path
 
 from openai import OpenAI
-def normalize_md(md: str) -> str:
-    md = md.replace("\r\n", "\n").replace("\r", "\n")
-    return md.strip() + "\n"
 
-
-def ensure_cta_footer(md: str) -> str:
-    md_norm = normalize_md(md)
-    lower = md_norm.lower()
-
-    has_free_guide_link = "/free-guide/" in lower
-    footer_parts = []
-
-    # Disclaimer
-    if "educational only" not in lower:
-        footer_parts.append("> Educational only; not betting advice.\n")
-
-    # Professional framing
-    if "how professionals think about this" not in lower:
-        footer_parts.append("## How professionals think about this\n")
-        footer_parts.append(
-            "- They focus on calibration and process, not short-term outcomes.\n"
-            "- They separate signal from noise over many trials.\n"
-            "- They care about prices, liquidity, and incentives—not narratives.\n"
-        )
-
-    # CTA
-    if not has_free_guide_link:
-        footer_parts.append(
-            "\nIf this was useful, the free guide walks through the core mechanics and mental models.\n"
-            "→ [Get the Free Guide](/free-guide/)\n"
-        )
-
-    if not footer_parts:
-        return md_norm
-
-    return md_norm + "\n---\n\n" + "".join(footer_parts).strip() + "\n"
-
+# -----------------------
+# Paths / files
+# -----------------------
 SITE_ROOT = Path(__file__).resolve().parent
 CONTENT_DIR = SITE_ROOT / "content" / "posts"
 
+TOPICS_FILE = SITE_ROOT / "automation" / "topics.txt"
+USED_TOPICS_FILE = SITE_ROOT / "automation" / "topics_used.txt"
+
+# -----------------------
+# Prompting
+# -----------------------
 SYSTEM_INSTRUCTIONS = """You are writing an educational article for SignalVsNoise, an anonymous,
 data-driven site explaining prediction markets and sharp betting.
 
@@ -59,15 +33,12 @@ Requirements:
 - Use examples (NBA when relevant)
 - No picks, no betting advice
 - Explain incentives and mechanics
-- End with a short section: "How professionals think about this"
 
 Structure:
 - H1 title
 - Short intro (why this matters)
 - Clear section headers (H2/H3)
 - Bullet points where helpful
-- Add a short disclaimer: "Educational only; not betting advice."
-- End with a soft CTA to the Free Guide page (/free-guide/)
 
 Do NOT:
 - Use emojis
@@ -75,60 +46,61 @@ Do NOT:
 - Make income claims
 """
 
+# -----------------------
+# Topic rotation (no duplicates)
+# -----------------------
+def get_next_topic() -> str:
+    if not TOPICS_FILE.exists():
+        raise SystemExit(
+            f"topics.txt not found at: {TOPICS_FILE}\n"
+            "Create it with one topic per line (automation/topics.txt).\n"
+        )
+
+    all_topics = [
+        t.strip()
+        for t in TOPICS_FILE.read_text(encoding="utf-8").splitlines()
+        if t.strip()
+    ]
+
+    used = set()
+    if USED_TOPICS_FILE.exists():
+        used = {
+            t.strip()
+            for t in USED_TOPICS_FILE.read_text(encoding="utf-8").splitlines()
+            if t.strip()
+        }
+
+    remaining = [t for t in all_topics if t not in used]
+
+    if not remaining:
+        raise SystemExit(
+            "All topics exhausted.\n"
+            "Add more lines to automation/topics.txt or clear automation/topics_used.txt.\n"
+        )
+
+    topic = random.choice(remaining)
+
+    USED_TOPICS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with USED_TOPICS_FILE.open("a", encoding="utf-8") as f:
+        f.write(topic + "\n")
+
+    return topic
+
+# -----------------------
+# Markdown helpers + CTAs
+# -----------------------
+INTRO_CTA_MARKER = "<!-- SVS_INTRO_CTA -->"
+
 def normalize_md(md: str) -> str:
-    # Normalize newlines and trim trailing whitespace
     md = md.replace("\r\n", "\n").replace("\r", "\n")
     return md.strip() + "\n"
-
-def ensure_cta_footer(md: str) -> str:
-    md_norm = ensure_intro_cta(md)
-    lower = md_norm.lower()
-    """
-    Ensures every article ends with a consistent footer:
-    - Disclaimer
-    - "How professionals think about this" section (if missing)
-    - CTA to /free-guide/
-    Avoids duplicating CTA if the model already added it.
-    """
-    md_norm = normalize_md(md)
-
-    # If the model already included a CTA link, don't add another one.
-    has_free_guide_link = "/free-guide/" in md_norm.lower()
-
-    footer_parts: list[str] = []
-
-    # Disclaimer (only add if not already present)
-    if "educational only" not in md_norm.lower():
-        footer_parts.append("> Educational only; not betting advice.\n")
-
-    # Ensure a "How professionals think about this" section exists.
-    if "how professionals think about this" not in md_norm.lower():
-        footer_parts.append("## How professionals think about this\n")
-        footer_parts.append(
-            "- They focus on calibration and process, not short-term outcomes.\n"
-            "- They separate signal from noise by tracking decisions over many trials.\n"
-            "- They care about prices, liquidity, and incentives—not narratives.\n"
-        )
-
-    # CTA
-    if not has_free_guide_link:
-        footer_parts.append(
-            "\nIf this was useful, the free guide walks through the core mechanics and mental models.\n"
-            "→ [Get the Free Guide](/free-guide/)\n"
-        )
-
-    if not footer_parts:
-        return md_norm
-
-    return md_norm + "\n---\n\n" + "".join(footer_parts).strip() + "\n"
-
-INTRO_CTA_MARKER = "<!-- SVS_INTRO_CTA -->"
 
 
 def ensure_intro_cta(md: str) -> str:
     """
     Inserts a short CTA near the top of the article.
     Works even if the intro is a single long paragraph.
+    Uses a marker to avoid duplicates.
     """
     md_norm = normalize_md(md)
 
@@ -157,7 +129,7 @@ def ensure_intro_cta(md: str) -> str:
     if intro_start is None:
         return md_norm
 
-    # Insert CTA after intro paragraph OR after 2 lines max
+    # Insert CTA after intro paragraph OR after a couple lines max
     insert_at = intro_start + 1
     for i in range(intro_start + 1, min(intro_start + 4, len(lines))):
         if lines[i].strip() == "":
@@ -176,6 +148,49 @@ def ensure_intro_cta(md: str) -> str:
     new_lines = lines[:insert_at] + cta_block + lines[insert_at:]
     return "\n".join(new_lines).strip() + "\n"
 
+
+def ensure_cta_footer(md: str) -> str:
+    """
+    Ensures every article ends with a consistent footer:
+    - Disclaimer
+    - "How professionals think about this" section (if missing)
+    - CTA to /free-guide/ (if missing)
+    Avoids duplicates.
+    """
+    md_norm = ensure_intro_cta(md)
+    lower = md_norm.lower()
+
+    has_free_guide_link = "/free-guide/" in lower
+    footer_parts: list[str] = []
+
+    # Disclaimer
+    if "educational only" not in lower:
+        footer_parts.append("> Educational only; not betting advice.\n")
+
+    # Ensure "How professionals think..." exists
+    if "how professionals think about this" not in lower:
+        footer_parts.append("## How professionals think about this\n")
+        footer_parts.append(
+            "- They focus on calibration and process, not short-term outcomes.\n"
+            "- They separate signal from noise over many trials.\n"
+            "- They care about prices, liquidity, and incentives—not narratives.\n"
+        )
+
+    # CTA
+    if not has_free_guide_link:
+        footer_parts.append(
+            "\nIf this was useful, the free guide walks through the core mechanics and mental models.\n"
+            "→ [Get the Free Guide](/free-guide/)\n"
+        )
+
+    if not footer_parts:
+        return md_norm
+
+    return md_norm + "\n---\n\n" + "".join(footer_parts).strip() + "\n"
+
+# -----------------------
+# Misc helpers
+# -----------------------
 def slugify(text: str) -> str:
     text = text.strip().lower()
     text = re.sub(r"[^\w\s-]", "", text)
@@ -188,16 +203,20 @@ def run(cmd: list[str]) -> None:
     subprocess.run(cmd, check=True)
 
 
+# -----------------------
+# Main
+# -----------------------
 def main() -> None:
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise SystemExit("OPENAI_API_KEY is not set. Run: export OPENAI_API_KEY='...'\n")
 
+    # If TOPIC is provided, use it. Otherwise auto-pick a fresh one.
     topic = os.getenv("TOPIC")
     if not topic:
-        topic = input("Topic: ").strip()
-    if not topic:
-        raise SystemExit("Topic cannot be empty.\n")
+        topic = get_next_topic()
+
+    print(f"Using topic: {topic}")
 
     client = OpenAI(api_key=api_key)
 
@@ -213,9 +232,8 @@ def main() -> None:
     if not text:
         raise SystemExit("Model returned empty output.\n")
 
-    text = ensure_intro_cta (text)
+    # Enforce CTAs deterministically
     text = ensure_cta_footer(text)
-    
 
     # Derive title: use first markdown H1 if present, otherwise the topic
     title = topic
@@ -231,7 +249,7 @@ def main() -> None:
 
     # If the model already included frontmatter, keep it; otherwise add it.
     if not text.lstrip().startswith("---"):
-        safe_title = title.replace('"', "'")  # avoid breaking YAML frontmatter
+        safe_title = title.replace('"', "'")
         frontmatter = (
             f"---\n"
             f'title: "{safe_title}"\n'

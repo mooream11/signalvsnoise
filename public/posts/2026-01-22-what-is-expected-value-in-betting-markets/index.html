@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="light">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>What Is Expected Value in Betting Markets? | SignalVsNoise</title>
+<meta name="keywords" content="">
+<meta name="description" content="What Is Expected Value in Betting Markets?
+Understanding expected value (EV) is essential for anyone interested in betting markets, prediction markets, or any situation involving risk and uncertainty. This concept helps explain why some bets make sense from a mathematical perspective, while others do not, independent of whether you win or lose a specific wager. This article unpacks expected value in a clear, step-by-step way, providing insights into its role in betting markets, with examples, mechanics, and how professionals use it.">
+<meta name="author" content="">
+<link rel="canonical" href="https://signalvsnoise.to/posts/2026-01-22-what-is-expected-value-in-betting-markets/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://signalvsnoise.to/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://signalvsnoise.to/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://signalvsnoise.to/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://signalvsnoise.to/apple-touch-icon.png">
+<link rel="mask-icon" href="https://signalvsnoise.to/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://signalvsnoise.to/posts/2026-01-22-what-is-expected-value-in-betting-markets/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    }
+
+</script><meta property="og:url" content="https://signalvsnoise.to/posts/2026-01-22-what-is-expected-value-in-betting-markets/">
+  <meta property="og:site_name" content="SignalVsNoise">
+  <meta property="og:title" content="What Is Expected Value in Betting Markets?">
+  <meta property="og:description" content="What Is Expected Value in Betting Markets? Understanding expected value (EV) is essential for anyone interested in betting markets, prediction markets, or any situation involving risk and uncertainty. This concept helps explain why some bets make sense from a mathematical perspective, while others do not, independent of whether you win or lose a specific wager. This article unpacks expected value in a clear, step-by-step way, providing insights into its role in betting markets, with examples, mechanics, and how professionals use it.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-22T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What Is Expected Value in Betting Markets?">
+<meta name="twitter:description" content="What Is Expected Value in Betting Markets?
+Understanding expected value (EV) is essential for anyone interested in betting markets, prediction markets, or any situation involving risk and uncertainty. This concept helps explain why some bets make sense from a mathematical perspective, while others do not, independent of whether you win or lose a specific wager. This article unpacks expected value in a clear, step-by-step way, providing insights into its role in betting markets, with examples, mechanics, and how professionals use it.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://signalvsnoise.to/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "What Is Expected Value in Betting Markets?",
+      "item": "https://signalvsnoise.to/posts/2026-01-22-what-is-expected-value-in-betting-markets/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What Is Expected Value in Betting Markets?",
+  "name": "What Is Expected Value in Betting Markets?",
+  "description": "What Is Expected Value in Betting Markets? Understanding expected value (EV) is essential for anyone interested in betting markets, prediction markets, or any situation involving risk and uncertainty. This concept helps explain why some bets make sense from a mathematical perspective, while others do not, independent of whether you win or lose a specific wager. This article unpacks expected value in a clear, step-by-step way, providing insights into its role in betting markets, with examples, mechanics, and how professionals use it.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "What Is Expected Value in Betting Markets? Understanding expected value (EV) is essential for anyone interested in betting markets, prediction markets, or any situation involving risk and uncertainty. This concept helps explain why some bets make sense from a mathematical perspective, while others do not, independent of whether you win or lose a specific wager. This article unpacks expected value in a clear, step-by-step way, providing insights into its role in betting markets, with examples, mechanics, and how professionals use it.\nWhy Expected Value Matters Betting markets are not just about chance—they combine odds, probabilities, and potential outcomes into decisions that have long-run implications. Expected value offers a lens for evaluating the fairness or attractiveness of a bet and helps bettors avoid decisions driven purely by emotion or erroneous intuition.\nBy understanding expected value:\nYou grasp why some bets are “+EV” or “-EV” regardless of short-term results. You learn how market odds relate to probabilities and potential payoffs. You develop a framework for making disciplined, data-informed decisions under uncertainty. While no concept guarantees winning, expected value is a foundational tool for clarifying the risk-reward balance.\nWhat Is Expected Value? Expected value is the average outcome you anticipate over many repetitions of the same bet or event. It weights all possible results by their probabilities and sums them up, giving a single number that represents the “mean” return.\nThe Basic Formula [ \\text{Expected Value} = \\sum (\\text{Probability of outcome} \\times \\text{Payoff of outcome}) ]\nIn simplest terms:\nMultiply each possible outcome’s payoff by the chance it happens. Add these products up. If the EV is positive, the bet has a positive average return over time. If it’s negative, you expect to lose money in the long run.\nExample: Coin Toss Bet Imagine a coin toss where you win $10 if heads comes up, but lose $9 if tails does.\nProbability heads = 0.5, payoff = +$10 Probability tails = 0.5, payoff = -$9 Calculate EV:\n[ 0.5 \\times 10 + 0.5 \\times (-9) = 5 - 4.5 = 0.5 ]\nHere, the expected value is +$0.50, meaning that repeating this bet many times yields an average gain of 50 cents per bet.\nExpected Value in Betting Markets Betting markets offer odds reflecting the market’s aggregated view of probabilities and potential payoffs. Understanding how to convert odds into expected value helps bettors compare the implied probabilities with their own assessments.\nUnderstanding Odds and Probabilities Odds represent the ratio of payoff relative to your stake and imply a probability that the bookmaker or market predicts. Common formats include:\nDecimal odds (popular in Europe): Total payout including stake. For example, 2.50 means if you bet $1, you get $2.50 if you win. Fractional odds (common in the UK): Show profit relative to stake. For example, 3/2 means a $2 bet wins $3 profit. Moneyline odds (popular in the US): Positive or negative numbers indicating winnings on $100 stake or amount required to win $100. To find the implied probability from decimal odds:\n[ \\text{Implied probability} = \\frac{1}{\\text{Decimal odds}} ]\nFor example, decimal odds of 2.50 imply a 1/2.5 = 40% chance.\nCalculating Expected Value From Odds Suppose you believe the true chance of an NBA team winning is 45%, but the market odds imply only a 40% chance.\nYour estimated probability (p = 0.45). The bookmaker’s decimal odds = 2.50 (implying 40% chance). If you bet $100, your potential profit is $150 ($2.50 payout minus your $1 stake per dollar). Calculate EV:\n[ \\text{EV} = p \\times \\text{profit if win} + (1-p) \\times \\text{loss if lose} ]\n[ = 0.45 \\times 150 + 0.55 \\times (-100) = 67.5 - 55 = 12.5 ]\nA positive $12.50 EV suggests this is, mathematically, a favorable bet according to your probability estimate.\nIncentives and Market Mechanics Markets aggregate differing opinions, skill sets, and information, providing constantly updated odds that reflect collective beliefs and incentives.\nHow Bookmakers Build Margins Bookmakers do not offer fair odds reflecting pure probability; they include a margin or overround to ensure profit. This means:\nThe sum of implied probabilities from all possible outcomes exceeds 100%. Odds are slightly lower than “fair” odds to compensate the bookmaker for risk and profit. This creates situations where careful bettors can find positive expected value if their probability assessment differs sufficiently.\nMarket Efficiency and Information Efficient markets quickly integrate news, statistics, and expert analysis. Sharp bettors or professionals exploit discrepancies between their private information and market odds.\nIn the NBA, for instance:\nLate-game injuries or lineup changes shift probabilities that might not yet be fully priced. Historical data helps refine probability estimates better than raw odds alone. The incentive for odds makers and bettors is to find the true probabilities and set or take bets near fair value.\nThe Role of Variance and Risk While expected value captures the average return over time, individual outcomes vary widely, especially in single bets. High-variance bets can yield big wins or losses, but expected value remains the long-run guiding principle.\nUnderstanding Variance Variance measures how much outcomes fluctuate around the expected value. A bet with large potential upside but small probability may have high variance and high EV. Conversely, a smaller but more likely payoff has lower variance. Both factors influence staking decisions, bankroll management, and risk tolerance.\nExample: NBA Futures vs. Game Bets Futures bets (e.g., betting on a team to win the championship early in the season) often have high variance because many outcomes are possible. Game bets on a single game have lower variance but possibly smaller edges. Sharps consider variance when sizing their bets, maintaining discipline even through short-term swings.\nHow Professionals Think About Expected Value Professional bettors and market participants don’t fixate solely on individual bets but think of expected value as a long-term expectancy integrated with bankroll management and information advantage.\nProbability Estimation: Professionals spend significant effort modeling probabilities using data, historical trends, injuries, and situational factors. Finding Edges: They seek bids, line moves, or market inefficiencies where their probability estimates differ from market odds enough to produce meaningful EV. Discipline: They often accept numerous losses along the way because EV is about the average return over a large sample size, not every outcome. Bankroll and Risk Management: Professionals size bets relative to the size of their bankroll and the confidence in their edges to survive variance. Continuous Learning: Markets evolve, and so do models; professionals adapt to changing information and market conditions. In short, expected value is not just a formula but a mindset—a tool for framing decisions in probabilistic terms with a focus on long-term results.\nEducational only; not betting advice. For more detailed insights on how betting markets work, how to evaluate odds, and how to think clearly about predictions and sharp betting, check out our Free Guide. It’s designed to build your understanding from the ground up without hype or false promises.\nHow professionals think about this They focus on calibration and process, not short-term outcomes. They separate signal from noise by tracking decisions over many trials. They care about prices, liquidity, and incentives—not narratives. ",
+  "wordCount" : "1175",
+  "inLanguage": "en",
+  "datePublished": "2026-01-22T00:00:00Z",
+  "dateModified": "2026-01-22T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://signalvsnoise.to/posts/2026-01-22-what-is-expected-value-in-betting-markets/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SignalVsNoise",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://signalvsnoise.to/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://signalvsnoise.to/" accesskey="h" title="SignalVsNoise (Alt + H)">SignalVsNoise</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://signalvsnoise.to/posts/" title="Articles">
+                    <span>Articles</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://signalvsnoise.to/free-guide/" title="Free Guide">
+                    <span>Free Guide</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      What Is Expected Value in Betting Markets?
+    </h1>
+    <div class="post-meta"><span title='2026-01-22 00:00:00 +0000 UTC'>January 22, 2026</span>&nbsp;·&nbsp;<span>6 min</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="what-is-expected-value-in-betting-markets">What Is Expected Value in Betting Markets?<a hidden class="anchor" aria-hidden="true" href="#what-is-expected-value-in-betting-markets">#</a></h1>
+<p>Understanding expected value (EV) is essential for anyone interested in betting markets, prediction markets, or any situation involving risk and uncertainty. This concept helps explain why some bets make sense from a mathematical perspective, while others do not, independent of whether you win or lose a specific wager. This article unpacks expected value in a clear, step-by-step way, providing insights into its role in betting markets, with examples, mechanics, and how professionals use it.</p>
+<h2 id="why-expected-value-matters">Why Expected Value Matters<a hidden class="anchor" aria-hidden="true" href="#why-expected-value-matters">#</a></h2>
+<p>Betting markets are not just about chance—they combine odds, probabilities, and potential outcomes into decisions that have long-run implications. Expected value offers a lens for evaluating the fairness or attractiveness of a bet and helps bettors avoid decisions driven purely by emotion or erroneous intuition.</p>
+<p>By understanding expected value:</p>
+<ul>
+<li>You grasp why some bets are “+EV” or “-EV” regardless of short-term results.</li>
+<li>You learn how market odds relate to probabilities and potential payoffs.</li>
+<li>You develop a framework for making disciplined, data-informed decisions under uncertainty.</li>
+</ul>
+<p>While no concept guarantees winning, expected value is a foundational tool for clarifying the risk-reward balance.</p>
+<h2 id="what-is-expected-value">What Is Expected Value?<a hidden class="anchor" aria-hidden="true" href="#what-is-expected-value">#</a></h2>
+<p>Expected value is the average outcome you anticipate over many repetitions of the same bet or event. It weights all possible results by their probabilities and sums them up, giving a single number that represents the “mean” return.</p>
+<h3 id="the-basic-formula">The Basic Formula<a hidden class="anchor" aria-hidden="true" href="#the-basic-formula">#</a></h3>
+<p>[
+\text{Expected Value} = \sum (\text{Probability of outcome} \times \text{Payoff of outcome})
+]</p>
+<p>In simplest terms:</p>
+<ul>
+<li>Multiply each possible outcome’s payoff by the chance it happens.</li>
+<li>Add these products up.</li>
+</ul>
+<p>If the EV is positive, the bet has a positive average return over time. If it’s negative, you expect to lose money in the long run.</p>
+<h3 id="example-coin-toss-bet">Example: Coin Toss Bet<a hidden class="anchor" aria-hidden="true" href="#example-coin-toss-bet">#</a></h3>
+<p>Imagine a coin toss where you win $10 if heads comes up, but lose $9 if tails does.</p>
+<ul>
+<li>Probability heads = 0.5, payoff = +$10</li>
+<li>Probability tails = 0.5, payoff = -$9</li>
+</ul>
+<p>Calculate EV:</p>
+<p>[
+0.5 \times 10 + 0.5 \times (-9) = 5 - 4.5 = 0.5
+]</p>
+<p>Here, the expected value is +$0.50, meaning that repeating this bet many times yields an average gain of 50 cents per bet.</p>
+<h2 id="expected-value-in-betting-markets">Expected Value in Betting Markets<a hidden class="anchor" aria-hidden="true" href="#expected-value-in-betting-markets">#</a></h2>
+<p>Betting markets offer odds reflecting the market’s aggregated view of probabilities and potential payoffs. Understanding how to convert odds into expected value helps bettors compare the implied probabilities with their own assessments.</p>
+<h3 id="understanding-odds-and-probabilities">Understanding Odds and Probabilities<a hidden class="anchor" aria-hidden="true" href="#understanding-odds-and-probabilities">#</a></h3>
+<p>Odds represent the ratio of payoff relative to your stake and imply a probability that the bookmaker or market predicts. Common formats include:</p>
+<ul>
+<li><strong>Decimal odds</strong> (popular in Europe): Total payout including stake. For example, 2.50 means if you bet $1, you get $2.50 if you win.</li>
+<li><strong>Fractional odds</strong> (common in the UK): Show profit relative to stake. For example, 3/2 means a $2 bet wins $3 profit.</li>
+<li><strong>Moneyline odds</strong> (popular in the US): Positive or negative numbers indicating winnings on $100 stake or amount required to win $100.</li>
+</ul>
+<p>To find the implied probability from decimal odds:</p>
+<p>[
+\text{Implied probability} = \frac{1}{\text{Decimal odds}}
+]</p>
+<p>For example, decimal odds of 2.50 imply a 1/2.5 = 40% chance.</p>
+<h3 id="calculating-expected-value-from-odds">Calculating Expected Value From Odds<a hidden class="anchor" aria-hidden="true" href="#calculating-expected-value-from-odds">#</a></h3>
+<p>Suppose you believe the true chance of an NBA team winning is 45%, but the market odds imply only a 40% chance.</p>
+<ul>
+<li>Your estimated probability (p = 0.45).</li>
+<li>The bookmaker’s decimal odds = 2.50 (implying 40% chance).</li>
+</ul>
+<p>If you bet $100, your potential profit is $150 ($2.50 payout minus your $1 stake per dollar). Calculate EV:</p>
+<p>[
+\text{EV} = p \times \text{profit if win} + (1-p) \times \text{loss if lose}
+]</p>
+<p>[
+= 0.45 \times 150 + 0.55 \times (-100) = 67.5 - 55 = 12.5
+]</p>
+<p>A positive $12.50 EV suggests this is, mathematically, a favorable bet according to your probability estimate.</p>
+<h2 id="incentives-and-market-mechanics">Incentives and Market Mechanics<a hidden class="anchor" aria-hidden="true" href="#incentives-and-market-mechanics">#</a></h2>
+<p>Markets aggregate differing opinions, skill sets, and information, providing constantly updated odds that reflect collective beliefs and incentives.</p>
+<h3 id="how-bookmakers-build-margins">How Bookmakers Build Margins<a hidden class="anchor" aria-hidden="true" href="#how-bookmakers-build-margins">#</a></h3>
+<p>Bookmakers do not offer fair odds reflecting pure probability; they include a margin or overround to ensure profit. This means:</p>
+<ul>
+<li>The sum of implied probabilities from all possible outcomes exceeds 100%.</li>
+<li>Odds are slightly lower than “fair” odds to compensate the bookmaker for risk and profit.</li>
+</ul>
+<p>This creates situations where careful bettors can find positive expected value if their probability assessment differs sufficiently.</p>
+<h3 id="market-efficiency-and-information">Market Efficiency and Information<a hidden class="anchor" aria-hidden="true" href="#market-efficiency-and-information">#</a></h3>
+<p>Efficient markets quickly integrate news, statistics, and expert analysis. Sharp bettors or professionals exploit discrepancies between their private information and market odds.</p>
+<p>In the NBA, for instance:</p>
+<ul>
+<li>Late-game injuries or lineup changes shift probabilities that might not yet be fully priced.</li>
+<li>Historical data helps refine probability estimates better than raw odds alone.</li>
+</ul>
+<p>The incentive for odds makers and bettors is to find the true probabilities and set or take bets near fair value.</p>
+<h2 id="the-role-of-variance-and-risk">The Role of Variance and Risk<a hidden class="anchor" aria-hidden="true" href="#the-role-of-variance-and-risk">#</a></h2>
+<p>While expected value captures the average return over time, individual outcomes vary widely, especially in single bets. High-variance bets can yield big wins or losses, but expected value remains the long-run guiding principle.</p>
+<h3 id="understanding-variance">Understanding Variance<a hidden class="anchor" aria-hidden="true" href="#understanding-variance">#</a></h3>
+<ul>
+<li><strong>Variance</strong> measures how much outcomes fluctuate around the expected value.</li>
+<li>A bet with large potential upside but small probability may have high variance and high EV.</li>
+<li>Conversely, a smaller but more likely payoff has lower variance.</li>
+</ul>
+<p>Both factors influence staking decisions, bankroll management, and risk tolerance.</p>
+<h3 id="example-nba-futures-vs-game-bets">Example: NBA Futures vs. Game Bets<a hidden class="anchor" aria-hidden="true" href="#example-nba-futures-vs-game-bets">#</a></h3>
+<ul>
+<li><strong>Futures bets</strong> (e.g., betting on a team to win the championship early in the season) often have high variance because many outcomes are possible.</li>
+<li><strong>Game bets</strong> on a single game have lower variance but possibly smaller edges.</li>
+</ul>
+<p>Sharps consider variance when sizing their bets, maintaining discipline even through short-term swings.</p>
+<h2 id="how-professionals-think-about-expected-value">How Professionals Think About Expected Value<a hidden class="anchor" aria-hidden="true" href="#how-professionals-think-about-expected-value">#</a></h2>
+<p>Professional bettors and market participants don’t fixate solely on individual bets but think of expected value as a long-term expectancy integrated with bankroll management and information advantage.</p>
+<ul>
+<li><strong>Probability Estimation</strong>: Professionals spend significant effort modeling probabilities using data, historical trends, injuries, and situational factors.</li>
+<li><strong>Finding Edges</strong>: They seek bids, line moves, or market inefficiencies where their probability estimates differ from market odds enough to produce meaningful EV.</li>
+<li><strong>Discipline</strong>: They often accept numerous losses along the way because EV is about the average return over a large sample size, not every outcome.</li>
+<li><strong>Bankroll and Risk Management</strong>: Professionals size bets relative to the size of their bankroll and the confidence in their edges to survive variance.</li>
+<li><strong>Continuous Learning</strong>: Markets evolve, and so do models; professionals adapt to changing information and market conditions.</li>
+</ul>
+<p>In short, expected value is not just a formula but a mindset—a tool for framing decisions in probabilistic terms with a focus on long-term results.</p>
+<hr>
+<h3 id="educational-only-not-betting-advice">Educational only; not betting advice.<a hidden class="anchor" aria-hidden="true" href="#educational-only-not-betting-advice">#</a></h3>
+<hr>
+<p>For more detailed insights on how betting markets work, how to evaluate odds, and how to think clearly about predictions and sharp betting, check out our <a href="/free-guide/">Free Guide</a>. It’s designed to build your understanding from the ground up without hype or false promises.</p>
+<hr>
+<h2 id="how-professionals-think-about-this">How professionals think about this<a hidden class="anchor" aria-hidden="true" href="#how-professionals-think-about-this">#</a></h2>
+<ul>
+<li>They focus on calibration and process, not short-term outcomes.</li>
+<li>They separate signal from noise by tracking decisions over many trials.</li>
+<li>They care about prices, liquidity, and incentives—not narratives.</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://signalvsnoise.to/">SignalVsNoise</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
